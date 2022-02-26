@@ -14,6 +14,7 @@ main {
   padding: 2em 2em 2.5em 2em;
   border-radius: 1em;
   position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
 }
 .sub {
   letter-spacing: 0.3em;
@@ -24,7 +25,15 @@ main {
 p {
   color: hsl(193, 38%, 86%);
 }
-img {
+.big {
+  font-size: 28px;
+}
+.desktop {
+  display: block;
+  width: 100%;
+}
+.phone {
+  display: none;
   width: 100%;
 }
 input {
@@ -33,7 +42,10 @@ input {
   border-radius: 50%;
   border: none;
   position: absolute;
-  right: 189px;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
   bottom: -30px;
   cursor: pointer;
   background: url("images/icon-dice.svg") no-repeat center hsl(150, 100%, 66%);
@@ -41,4 +53,13 @@ input {
 input:hover {
   box-shadow: 0 0 25px hsl(150, 100%, 66%);
   transition: 0.3s ease-in;
+}
+
+@media (max-width: 500px) {
+  .desktop {
+    display: none;
+  }
+  .phone {
+    display: block;
+  }
 }

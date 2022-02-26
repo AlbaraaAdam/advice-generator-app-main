@@ -19,16 +19,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script>
-      $.getJSON("https://api.adviceslip.com/advice", function (data) {
-        console.log(data);
-        var num = data.slip.id;
-        var advice = data.slip.advice;
-
-        $(".advice-num").append(num);
-        $(".advice").append(advice);
-      });
-    </script>
+    <script src="script.js"></script>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -39,9 +30,22 @@
   <body>
     <main>
       <p class="sub">Advice #<span class="advice-num"></span></p>
-      <p class="advice" style="font-size: 28px"></p>
-      <img src="images/pattern-divider-desktop.svg" alt="pattern" />
-      <input type="button" onclick="window.location.reload()" />
+      <p class="big">"<span class="advice big"></span>"</p>
+      <img
+        class="desktop"
+        src="images/pattern-divider-desktop.svg"
+        alt="pattern"
+      />
+      <img
+        class="phone"
+        src="images/pattern-divider-mobile.svg"
+        alt="pattern"
+      />
+      <input
+        type="button"
+        onclick="window.location.reload()"
+        title="Click to show next advice"
+      />
     </main>
   </body>
 </html>
