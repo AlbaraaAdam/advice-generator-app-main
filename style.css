@@ -1,0 +1,44 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: hsl(218, 18%, 18%);
+  overflow: hidden;
+  font-family: "Manrope";
+}
+main {
+  text-align: center;
+  width: 375px;
+  background: hsl(217, 19%, 24%);
+  padding: 2em 2em 2.5em 2em;
+  border-radius: 1em;
+  position: relative;
+}
+.sub {
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: hsl(150, 100%, 66%);
+}
+p {
+  color: hsl(193, 38%, 86%);
+}
+img {
+  width: 100%;
+}
+input {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  right: 189px;
+  bottom: -30px;
+  cursor: pointer;
+  background: url("images/icon-dice.svg") no-repeat center hsl(150, 100%, 66%);
+}
+input:hover {
+  box-shadow: 0 0 25px hsl(150, 100%, 66%);
+  transition: 0.3s ease-in;
+}
